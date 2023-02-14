@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReplyCard from "./ReplyCard";
+
 import "./AuthorCard.css";
 import { Icon } from "@iconify/react";
 
@@ -26,7 +26,7 @@ const AuthorCard = ({ data }) => {
 			{isOpen && (
 				<div style={{ marginLeft: "15px" }}>
 					{replies?.map((reply, i) => {
-						return <ReplyCard key={i} reply={reply} />;
+						return <AuthorCard key={i} data={reply} />;
 					})}
 				</div>
 			)}
